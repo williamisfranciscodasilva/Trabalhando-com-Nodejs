@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const handlebars = require('express-handlebars');
-const Sequelize = require('sequelize')
+const Sequelize = require('sequelize');
 
 // Config
   // Template Engine
@@ -14,7 +14,7 @@ const Sequelize = require('sequelize')
     })
 // Rotas
   app.get('/cad', function(req,res){
-      res.send('Rota de cadastro de Posts')
+      res.render(__dirname +'/views/layouts/formulario')
   })
 
 app.listen(8081, function(){
