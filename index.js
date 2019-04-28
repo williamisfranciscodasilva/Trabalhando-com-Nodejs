@@ -8,10 +8,14 @@ const Sequelize = require('sequelize')
   app.engine('handlebars', handlebars({defaultLayout: 'main'}))
   app.set('view engine', 'handlebars')
   // Conexão com o banco de dados MySql
-  const sequelize = new Sequelize('sistemadecadastro', 'root', 'admin', {
-    host: "localhost",
-    dialect: 'mysql'
-})
+    const sequelize = new Sequelize('sistemadecadastro', 'root', 'admin', {
+     host: "localhost",
+     dialect: 'mysql'
+    })
+// Rotas
+  app.get('/cad', function(req,res){
+      res.send('Rota de cadastro de Posts')
+  })
 
 app.listen(8081, function(){
     console.log("Servidor Rodando na url http://localhost:8081")
