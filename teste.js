@@ -19,10 +19,10 @@ const Postagem = sequelize.define('postagens', {
     }
 })
 
-Postagem.create({
+/*Postagem.create({
     titulo: "Título Qualquer",
     conteudo: "Conteúdo Qualquer"
-})
+})*/
 
 const Usuario = sequelize.define('usuarios',{
     nome: {
@@ -39,10 +39,10 @@ const Usuario = sequelize.define('usuarios',{
     }
 })
 
-Usuario.create({
+/*Usuario.create({
     nome: "Nome qualquer",
     sobrenome: "Sobrenome Qualquer",
     idade: 50,
     email: "email@qualquer.com"
-})
+})*/
 //Usuario.sync({force: true})
