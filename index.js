@@ -15,7 +15,9 @@ const Post = require('./models/Post');
   
 // Rotas
   app.get('/', function(req, res){
-    res.render(__dirname +'/views/layouts/home')
+    Post.findAll({order: [['id', 'DESC']]}).then(function(posts){
+      res.render(__dirname +'/views/layouts/home', {posts: posts})
+    })
   })
   app.get('/cad', function(req,res){
       res.render(__dirname +'/views/layouts/formulario')
